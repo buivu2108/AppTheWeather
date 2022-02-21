@@ -28,15 +28,15 @@ class MainActivity2 : AppCompatActivity() {
 
     private fun initEven() {
         img_btn_back.setOnClickListener {
-            //intent = Intent(this, MainActivity::class.java)
+            intent = Intent(this, MainActivity::class.java)
             onBackPressed()
         }
     }
 
     private fun Get7DayData() {
-        //var data: String? = intent.getStringExtra("name_city")
+        var data: String? = intent.getStringExtra("name_city")
         var url =
-            "https://api.weatherbit.io/v2.0/forecast/daily?city=HaNoi&key=69ea3c8ee93e4a55b4a4ea81a456b157&days=7"
+            "api.weatherbit.io/v2.0/forecast/daily?city=HaNoi&key=69ea3c8ee93e4a55b4a4ea81a456b157&days=7"
         var requestQueu: RequestQueue = Volley.newRequestQueue(this)
         val jsonObjectReques = JsonObjectRequest(Request.Method.GET, url, null,
             { response ->

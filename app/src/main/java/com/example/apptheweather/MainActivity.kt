@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         }
         btn_ngay_tiep_theo.setOnClickListener {
             var intent = Intent(this, MainActivity2::class.java).apply {
-               // putExtra("name_city", city)
+                putExtra("name_city", city)
             }
             startActivity(intent)
         }
